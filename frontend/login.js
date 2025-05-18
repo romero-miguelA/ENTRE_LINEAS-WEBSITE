@@ -17,15 +17,15 @@ document.getElementById('login-form').addEventListener('submit', async function 
         const data = await response.json();
 
         if (response.ok) {
+            localStorage.setItem('logueado', 'true'); // <-- Agrega esta línea
             alert(data.message);
-            // Redireccionar o guardar info en localStorage si es necesario
-            window.location.href = 'index.html'; // o donde desees llevarlo tras el login
-            messages.success('Inicio de sesión exitoso');
+            window.location.href = 'tienda.html';
+            return; // Detiene la ejecución después de redirigir
         } else {
             alert(data.error || 'Error al iniciar sesión');
         }
     } catch (error) {
-        console.error('Error de red:', error);
-        alert('Error de conexión con el servidor');
+        console.error('Error al hacer login:', error);
+        alert('Error al hacer login');
     }
 });

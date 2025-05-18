@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tu archivo de estilos personalizado -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:wght@400&display=swap" rel="stylesheet">
+    <style>
+        .cart-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+            padding: 24px;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f9f9f9;
+            padding: 14px 18px;
+            margin-bottom: 12px;
+            border-radius: 6px;
+        }
+        .cart-title { font-weight: bold; }
+        .cart-cantidad { color: #555; }
+        .cart-price { color: #ff9800; font-weight: bold; }
+        .btn-delete {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 7px 14px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        .btn-delete:hover { background-color: #c0392b; }
+        .btn-pagar {
+            background: #43a047;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+        .btn-pagar:hover { background: #2e7031; }
+    </style>
+</head>
+<body>
+    <!-- Cabecera superior con enlaces informativos y sociales -->
+    <header class="top-header">
+        <div class="top-links">
+            <a href="Preguntas.html">Preguntas Frecuentes</a>
+            <span>|</span>
+            <a href="Ayuda.html">Ayuda</a>
+            <span>|</span>
+            <a href="Soporte.html">Soporte</a>
+        </div>
+    </header>
+
+    <!-- Sección del logo y barra de búsqueda -->
+    <div class="search-section">
+        <div class="logo">
+            <h1>ENTRE <span>LINEAS</span></h1>
+        </div>
+    </div>
+
+    <!-- Menú de navegación -->
+    <nav class="main-nav">
+        <a href="Index.html">Home</a>
+        <a href="SobreNosotros.html">Sobre Nosotros</a>
+        <a href="Tienda.html">Tienda</a>
+        <a href="Domicilios.html">Domicilios</a>
+        <div class="auth-links">
+            <a href="carrito.html">
+                <img src="Img/carrito-de-compras.png" alt="Carrito de compras" width="24" height="24">
+            </a>
+            <a href="Login.html">Iniciar Sesión</a>
+            <a href="Registro.html">Registrarse</a>
+        </div>
+    </nav>
+
+    <div class="cart-container">
+        <h2>Carrito de compras</h2>
+        <div id="cart-empty" style="display:none;"><em>El carrito está vacío</em></div>
+        <div id="cart-items"></div>
+        <div class="cart-summary" style="margin-top:10px;">
+            <div class="summary-details">
+                <p>Producto/s: <span id="total-items">0</span></p>
+                <p>Envío: <span id="shipping-cost">$0.00</span></p>
+                <p>Total: <span id="total-price">$0.00</span></p>
+            </div>
+            <button class="btn-pagar" id="checkout-button">Pagar</button>
+        </div>
+    </div>
+    <script src="carrito.js"></script>
+</body>
+</html>

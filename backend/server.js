@@ -4,7 +4,7 @@ const cors = require('cors');
 const path = require('path');
 
 const app = express();
-const PORT = 3000;
+PORT = process.env.PORT || 3000;
 
 // Middlewares
 app.use(cors());
@@ -69,7 +69,7 @@ app.post('/login', (req, res) => {
 
 // Redirigir "/" al registro.html
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/registro.html'));
+    res.sendFile(path.join(__dirname, '../frontend/index.html'));
 });
 
 // Iniciar servidor

@@ -61,6 +61,79 @@ body {
     background-position: center;
 }
 
+/* Puedes agregar esto a tu archivo style.css o dentro de una etiqueta <style> en carrito.html */
+/* Mejora visual del carrito */
+.cart-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    padding: 24px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.cart-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.cart-title {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.cart-price {
+    color: #ff9800;
+    font-weight: bold;
+}
+
+.cart-cantidad {
+    color: #555;
+    font-size: 0.95em;
+}
+
+.cart-summary {
+    margin-top: 24px;
+    background: #f5f5f5;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.cart-summary h3 {
+    margin-top: 0;
+}
+
+.summary-details p {
+    margin: 6px 0;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 7px 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn-delete:hover {
+    background-color: #c0392b;
+}
+
 .search-section p {
     color: #FFFFFF;
     font-family: 'Bona Nova', serif;
@@ -121,6 +194,27 @@ body {
     z-index: 1000;
 }
 
+/* Puedes agregar esto a tu archivo style.css */
+/* Estilos para los botones "Agregar al carrito" */
+.btn-add-carrito {
+    background: #ff9800;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.btn-add-carrito:hover {
+    background: #e65100;
+    transform: scale(1.07) translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255,152,0,0.25);
+}
+
 .main-nav a {
     margin: 0 15px;
     font-size: 1rem;
@@ -149,8 +243,8 @@ body {
 .hero {
     position: relative;
     height: 700px;
-    background: url("Img/1ce823c4c571d1a8fb1b1f6b00372f3b.gif") no-repeat center/cover;
-    background-position: center -350px;
+    background: url("Img/1ce823c4c571d1a8fb1b1f6b00372f3b.png") no-repeat center/cover;
+    background-position: center -300px;
 }
 
 .hero .hero-text {
@@ -171,7 +265,6 @@ body {
     font-size: 2.8rem;
     margin-bottom: 25px;
     background: radial-gradient(circle, #CC9600, #FF7700);
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     line-height: 1.2;
 }
